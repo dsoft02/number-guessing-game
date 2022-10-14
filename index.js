@@ -1,8 +1,8 @@
 const prompt = require('prompt-sync')({sigint: true});
 //variable to store the stage range
-var range = 2;
-var point = 0;
-var stage = 1;
+var range = 2; //variable to hold the range of number to be guessed
+var point = 0; //holds the user point
+var stage = 1; //current stage/level of the user
 
 //request for player username
 console.log("WELCOME TO GUESS MY NUMBER GAME\n=================================\n");
@@ -16,7 +16,6 @@ while (!gameOver) {
   // Random number from 1 - range
   let numberToGuess = Math.round(Math.random() * range);
   console.log(`STAGE: ${stage}\t Total Points: ${point}`);
-  console.log(numberToGuess);
   // Get user input
   let guess = prompt(`Please Guess a number from 1 to ${range}: `);
   // Convert the string input to a number
